@@ -9,7 +9,7 @@
 
 <style scoped>
 h1 {
-  color: red;
+  color: silver;
   text-align: center;
 }
 </style>
