@@ -1,7 +1,7 @@
 <script setup>
   import { ref } from "vue";
   import css from "./App.module.css";
-  
+
   const text = ref("");
   const cards = ref(["card123", "card289", "card356", "card417", "card505"]);
   const obj = ref([{value_1: 12, value: "first"}, {value_1:22, value: "second"}, {value_1:32, value: "third"}]);
