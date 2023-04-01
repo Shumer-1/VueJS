@@ -4,45 +4,19 @@
     reactive,
     watchEffect,
     watch } from "vue";
-  
+  import css from "./App.module.css"
+  import Cards from "./components/Cards/Cards.vue"
 
-  const text = ref("");
-  const answer = ref("");
-  const answerImg = ref("");
+    const cards = ["card_1", "card_2", "card_3"];
 
-
-  watch(text, async ()=>{
-    console.log("watch");
-    if (text.value.indexOf("?") === -1){
-      answer.value = "Это не вопрос"; 
-      return;
-    }
-    const res = await fetch("https://yesno.wtf/api");
-    const data = await res.json();
-    answer.value = data.answer;
-    answerImg.value = data.image;
-  });
-
-  watchEffect(async ()=>{
-    console.log("watchEffect");
-    if (text.value.indexOf("?") === -1){
-      answer.value = "Это не вопрос"; 
-      return;
-    }
-    const res = await fetch("https://yesno.wtf/api");
-    const data = await res.json();
-    answer.value = data.answer;
-    answerImg.value = data.image;
-  });
-  function handler(el){
-    el.value = Math.random();
-  }
 
 </script>
 
 <template>
-  <input v-model="text" placeholder="Введите ваш вопрос"/>
-  <p v-if="answer">{{ answer }}</p>
-  <img v-if="answerImg" :src="answerImg" :alt="answer"/>
-  <input v-for="item in 3" :ref="handler"/>
+  <template  v-for="card in cards">
+    <Cards>
+        <template #slot_1> {{ card }} </template>
+        <template #slot_2 > {{ card }} </template>
+    </Cards>
+  </template>
 </template>

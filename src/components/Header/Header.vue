@@ -1,21 +1,11 @@
 <script setup>
 import { 
-    ref,
-    reactive,
-    onMounted, 
-    onBeforeMount, 
-    onBeforeUpdate, 
-    onUpdated, 
-    onBeforeUnmount, 
-    onUnmounted } from "vue";
-onBeforeMount(() => console.log("beforeMount"));
-onMounted(() => console.log("mounted"));
-onBeforeUpdate(() => console.log("beforeUpdate"));
-onUpdated(() => console.log("updated"));
-onBeforeUnmount(() => console.log("beforeUnmount"));
-onUnmounted(() => console.log("unmounted"));
+    ref} from "vue";
+const props = defineProps(["foo", "bar"]);
+const time = ref(Date.now());
+const timeIntervalid = ref(0);
 </script>
 
 <template>
-    <div>1</div>
+    <div>{{ foo }} {{ bar }}</div>
 </template>
