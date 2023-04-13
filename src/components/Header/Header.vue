@@ -1,11 +1,9 @@
 <script setup>
-import { 
-    ref} from "vue";
-const props = defineProps(["foo", "bar"]);
-const time = ref(Date.now());
-const timeIntervalid = ref(0);
+    defineEmits(["myEvent"]);
 </script>
 
 <template>
-    <div>{{ foo }} {{ bar }}</div>
+    <div>
+        <button @click="$emit('myEvent', 12)">Click</button>
+    </div>
 </template>
