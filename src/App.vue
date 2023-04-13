@@ -10,6 +10,7 @@
  };
 </script>
 
+
 <template>
   <Header @myEvent="a"></Header>
   <p v-if="isShow">Надо же, на кнопочку нажал</p>
