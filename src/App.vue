@@ -1,6 +1,7 @@
 <script setup>
  import {ref, Transition} from "vue";
  import Header from "./components/Header/Header.vue";
+ import Input from "./components/Input/Input.vue";
 
  const isShow = ref(false);
  const text = ref("");
@@ -13,9 +14,9 @@
 
 
 <template>
-  <button @click="a">Click me</button>
-  <Transition>
-    <p v-if="isShow">Hello, my event!</p>
+  <button @click="a">Click me</button><br>
+  <Transition mode="out-in">
+    <component :is="isShow ? Header: Input"></component>
   </Transition>
 </template>
 
