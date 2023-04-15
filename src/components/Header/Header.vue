@@ -1,15 +1,10 @@
 <script setup>
-    const emit = defineEmits({
-        myEvent(event){
-            console.log(event);
-            if (event.clientX > 30) return true;
-            return false;
-    },
-    });
+    import {computed} from "vue";
+    defineEmits(["myEvent"]);
 </script>
 
 <template>
     <div>
-        <button @click="$emit('myEvent', $event)">Click</button>
+        <button @click="$emit('myEvent', $event)"> Click me to see the text </button>
     </div>
 </template>
