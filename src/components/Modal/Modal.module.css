@@ -1,33 +1,38 @@
 .modal__overlay {
+    /*задний фон при нажатии, плюс пространство 
+    работы, для всплывашки не использую*/
     position: absolute;
     top:0;
     left:0;
     right: 0;
     bottom:0;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 100;
+    background-color: #fff;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .modal{
-    width:clamp(300px, 50%, 1200px);
-    min-height: 200px;
-    background-color: #fff;
-    border-radius: 10px;
+    /*само окно*/
+    width:clamp(200px, 5%, 300px);
+    min-height: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
     border: 1px;
     padding: 15px 10px;
-    position: relative;
+    position: absolute;
+    left: 3px;
+    bottom: 50px;
     word-break: break-all;
 }
 
 .modal__header button{
+    /*Кнопка закрыть*/
     border: none;
     background: none;
     position: absolute;
     right: 3px;
     top:3px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
+

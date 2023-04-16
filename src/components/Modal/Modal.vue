@@ -6,11 +6,15 @@
     defineEmits(["close"]);
 </script>
 
-<template>
-    
+<!---нужно сделать всплывашку
+внизу в углу, есть кнопка открыть ее и крестик, 
+на фон не влияет-->
+
+
+<template >
     <Teleport to="#modal">
         <Transition>
-            <div :class="css.modal__overlay" v-if="show" @click.self="$emit('close')">
+            <div v-if="show">
                 <div :class="css.modal">
                     <div :class="css.modal__header">
                         <button @click="$emit('close')">&times;</button>
