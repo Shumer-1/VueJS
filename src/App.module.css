@@ -1,22 +1,15 @@
-.myClassH1{
-    color: red;
-    text-align: center;
+.button{
+    background-color: gray;
+    color:azure;
+    border:1px;
+    height: 30px;
 }
-.myClassP1{
-    color: greenyellow;
-    text-align: center;
-    cursor:e-resize;
-}
-.myClass_1{
-    color:blue;
-    text-align: center;
-    cursor:alias;
-}
-.myClass_2{
-    color:aqua;
-    text-align: right;
-}
-.myClass_3{
-    color:blueviolet;
-    text-align: left;
+
+.button2{
+    background-color: gray;
+    color:azure;
+    border:1px;
+    height: 30px;
+    position: relative;
+    left: 10px;
 }
