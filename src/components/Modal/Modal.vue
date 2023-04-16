@@ -12,7 +12,7 @@
 
 
 <template >
-    <Teleport to="#modal">
+    <Teleport to="#snackbar">
         <Transition>
             <div v-if="show">
                 <div :class="css.modal">
